@@ -1,0 +1,36 @@
+{
+    "productList":[
+        {
+            "productname":"Laptops"
+        }
+        ,
+        {
+            "productname":"Monitors"
+        },
+         {
+            "productname":"Phones"
+        }
+    ],
+    "productselect":[
+        {
+            "productitem":"Sony vaio i5"
+        },
+        {
+            "productitem":"ASUS Full HD"
+        },
+         {
+            "productitem":"Nexus 6"
+        }
+    ],
+    "SearchproductName":"ASUS Full HD",
+    "URL":"https://www.demoblaze.com/index.html",
+    "Username":"BalaMurugabooban",
+    "Password":"Playwright",
+    "Cart_URL":"https://www.demoblaze.com/cart.html",
+    "name":"Bala",
+    "country":"India",
+ "city":"Chennai",
+"creditcard":"1234567890",
+"month":"oct",
+"year":"2030"
+}
