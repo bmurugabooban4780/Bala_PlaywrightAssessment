@@ -5,23 +5,23 @@ import {productselect} from '../testData/product.json'
 test.describe('Test suite AddItem_CheckOut_Purchase',() => {
     test.beforeEach( async ({page})=> {
 
-// //Login Validation
-// await page.goto('https://www.demoblaze.com/index.html');
-//   await page.getByRole('link', { name: 'Log in' }).click();
-//   await page.locator('#loginusername').click();
-//   await page.locator('#loginusername').fill('BalaMurugabooban');
-//   await page.locator('#loginpassword').click();
-//   await page.locator('#loginpassword').fill('Playwright');
-//   await page.getByRole('button', { name: 'Log in' }).click();
+//Login Validation
+await page.goto('https://www.demoblaze.com/index.html');
+  await page.getByRole('link', { name: 'Log in' }).click();
+  await page.locator('#loginusername').click();
+  await page.locator('#loginusername').fill('BalaMurugabooban');
+  await page.locator('#loginpassword').click();
+  await page.locator('#loginpassword').fill('Playwright');
+  await page.getByRole('button', { name: 'Log in' }).click();
 
-//   const Usrname =  page.locator('#nameofuser')
-//         await expect(Usrname).toContainText('Welcome BalaMurugabooban')
-// console.log('User Logged In:',await Usrname.textContent())
+  const Usrname =  page.locator('#nameofuser')
+        await expect(Usrname).toContainText('Welcome BalaMurugabooban')
+console.log('User Logged In:',await Usrname.textContent())
     })
 
 test('Add cart',async ({ page }) => {
 test.slow()
-test.setTimeout(10000)
+//test.setTimeout(10000)
 for (const [index, product] of productList.entries()) {
 
      const productit = productselect[index];
@@ -40,14 +40,15 @@ await page.goto('https://www.demoblaze.com/index.html');
             console.log(`Dialog message: ${dialog.message()}`);
             await dialog.dismiss();
         });
-page.waitForTimeout(5000)
-      page.getByRole('link', { name: 'Add to cart' }).click(),{timeout:20000}
-       //await page.getByRole('link', { name: 'Add to cart' }).click();
+//page.waitForTimeout(5000)
+    //  page.getByRole('link', { name: 'Add to cart' }).click(),{timeout:20000}
+       await page.getByRole('link', { name: 'Add to cart' }).click();
        await page.screenshot({
             path: `./screenshot/product_${index + 1}.png`,
             fullPage: true
         });
       }
+ //     await page.goto("https://www.demoblaze.com/cart.html")
     })
 
 test('Delete cart',async ({ page }) => {

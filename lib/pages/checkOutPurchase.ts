@@ -1,7 +1,7 @@
 import {Page,Locator} from '@playwright/test'
 import url from '../../testData/product.json'
 import custdet from '../../testData/product.json'
-import {page} from '../../lib/helpers/browserSetup'
+
 export default class chkoutpurchase{
     readonly page:Page
     readonly btnplaceOrder:Locator
@@ -28,7 +28,7 @@ export default class chkoutpurchase{
      }
  async CheckoutPurchase () {
 await this.page.goto(url.Cart_URL)
- //page.waitForTimeout(50000)
+//this.page.waitForTimeout(5000)
  console.log("Place the Order")
    this.btnplaceOrder.click();
    await this.page.screenshot({path: './screenshot/placeorder.png',fullPage:true})

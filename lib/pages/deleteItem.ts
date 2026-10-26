@@ -1,6 +1,6 @@
 import {Page,Locator} from '@playwright/test'
 import url from '../../testData/product.json'
-import {page} from '../../lib/helpers/browserSetup'
+
 export default class deleteCartItem{
     readonly page:Page
     readonly deleteItem:Locator
@@ -14,7 +14,7 @@ export default class deleteCartItem{
        this.linkCart =page.getByRole('link', { name: 'Cart' })
      }
  async DeleteProdItem () {
-    //this.page.waitForTimeout(5000)
+  //  this.page.waitForTimeout(2000)
        await this.page.goto(url.Cart_URL)
          //this.linkCart.click();
        await this.page.screenshot({

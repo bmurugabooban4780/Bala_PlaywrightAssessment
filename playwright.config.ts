@@ -40,32 +40,32 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name:'setup',
-      testMatch:'**/*.setup.ts',
-      // testMatch:'**/swaggerTest.setup.ts'
+    // {
+    //   name:'setup',
+    //   testMatch:'**/*.setup.ts',
+    //   // testMatch:'**/swaggerTest.setup.ts'
      
       
-    },
-    
-    {
-      name:'chromium',
-    //  testMatch:'**/practice2.spec.ts',
-       dependencies:['setup'],
-      // teardown:'Logout',
-      
-    
-      use: { 
-        ...devices['Desktop Chrome'],
-      storageState:ADMIN_STORAGE_STATE,
-      
-      }
-    },
-
-    // {
-    //   name: 'chromium',
-    //   use: { ...devices['Desktop Chrome'] },
     // },
+    
+    // {
+    //   name:'chromium',
+    // //  testMatch:'**/practice2.spec.ts',
+    //    dependencies:['setup'],
+    //   // teardown:'Logout',
+      
+    
+    //   use: { 
+    //     ...devices['Desktop Chrome'],
+    //   storageState:ADMIN_STORAGE_STATE,
+      
+    //   }
+    // },
+
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
 
     // {
     //   name: 'firefox',
